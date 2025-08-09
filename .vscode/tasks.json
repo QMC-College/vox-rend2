@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build with MinGW and GLFW",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "${file}",
+        "-IC:/msys64/mingw64/include",
+        "-LC:/msys64/mingw64/lib",
+        "-lglfw",
+        "-lopengl32",
+        "-lgdi32",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build C++ file with MinGW and GLFW"
+    }
+  ]
+}
